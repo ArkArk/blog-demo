@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "node"
+  - "9"
+  - "10"
+script:
+  - cd 2018-01-18/demo
+  - npm install
+  - npm run-script build
+  - cp -r . $TRAVIS_BUILD_DIR/dist/2018-01-18
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: dist
+  target-branch: gh-pages
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
+    node: "node"
