@@ -1,12 +1,11 @@
 language: node_js
 node_js:
   - "node"
-  - "9"
-  - "10"
+  - "12"
 script:
   - cd 2018-01-18/demo
   - npm install
-  - npm run-script build
+  - npm run build
   - cp -r . $TRAVIS_BUILD_DIR/dist/2018-01-18
 
 deploy:
