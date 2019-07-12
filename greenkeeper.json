@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "2018-01-18/demo/package.json"
+      ]
+    }
+  }
+}
